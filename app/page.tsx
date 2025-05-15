@@ -43,7 +43,7 @@ export default function Home() {
           />
         )}
       </Carousel>
-      <div className="absolute bg-linear-to-b from-transparent to-black to-50% flex items-center justify-center p-0 w-full -bottom-15">
+      <div className="absolute bg-linear-to-b from-transparent to-black to-40% flex items-center justify-center p-0 w-full -bottom-15">
         <h1 className="text-5xl sm:text-7xl text-blue-600 font-semibold text-center tracking-widest text-shadow-lg/20">PARAGON<br/>BLADERZ</h1>
       </div>
     </section>
