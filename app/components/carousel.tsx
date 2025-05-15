@@ -16,13 +16,13 @@ const Carousel = ({ children: slides } : { children: ReactNode }) => {
                 style={{ transform: `translateX(-${curr * 100}%)` }}>{slides}
             </div>
             <button
-                className="absolute z-1 bg-black/30 p-5 rounded-full left-7 top-[50%] cursor-pointer hover:bg-black/50 hover:-translate-x-2 duration-200"
+                className="absolute z-1 bg-black/30 p-5 rounded-full left-7 top-[50%] cursor-pointer hover:-translate-x-2 duration-200"
                 onClick={prev}
             >
                 <MdOutlineArrowBackIosNew/>
             </button>
             <button
-                className="absolute z-1 bg-black/30 p-5 rounded-full right-7 top-[50%] cursor-pointer hover:bg-black/50 hover:translate-x-2 duration-200"
+                className="absolute z-1 bg-black/30 p-5 rounded-full right-7 top-[50%] cursor-pointer hover:translate-x-2 duration-200"
                 onClick={next}
             >
                 <MdOutlineArrowForwardIos/>
