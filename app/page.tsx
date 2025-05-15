@@ -1,103 +1,115 @@
-import Image from "next/image";
+import Carousel from "./components/carousel"
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const slides = [
+    '/b_s_m_494334691_1624864054897894_7337477547114014200_n.jpg',
+    '/b_494815723_662971103211297_1012557790628101125_n.jpg',
+    '/b_494329702_1647706609283720_1754832116793324017_n.jpg',
+    '/b_494332022_1886393372110283_566263732319858300_n.jpg',
+    '/b_494814074_711796674675800_1916715554277404591_n.jpg',
+    '/b_s_494334285_1202180258303455_3402547453332226795_n.jpg',
+    '/b_s_494328194_1006288311698056_932510846075985259_n.jpg',
+    '/b_s_494329823_3106490832837996_9169633562725432498_n.jpg',
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+  ]
+  return <div>
+    <div className="flex justify-center" id="paragon">
+      <img  
+          src='/paragon_bladerz.svg'
+          alt="beys on grass"
+          className="h-18 my-2 px-4"
+        />
+    </div>
+    <nav className="flex justify-center border-4 border-blue-700 border-x-0 h-fit">
+      <ul className="flex flex-wrap justify-center">
+        <li className="sm:px-3 sm:py-1 px-2 py-1 cursor-pointer duration-200 hover:bg-blue-700 sm:text-xl text-md">
+          <a href="#A">ABOUT</a>
+        </li>
+        <li className="sm:px-3 sm:py-1 px-2 py-1 cursor-pointer duration-200 hover:bg-blue-700 sm:text-xl text-md">
+          <a href="#T">TOURNAMENTS</a>
+        </li>
+        <li className="sm:px-3 sm:py-1 px-2 py-1 cursor-pointer duration-200 hover:bg-blue-700 sm:text-xl text-md">
+          <a href="#G">GALLERY</a>
+        </li>
+      </ul>
+    </nav>
+    <section className="relative">
+      <Carousel>
+        {slides.map((s,i) => 
+          <img 
+            key={i}
+            src={s}
+            alt={`slide ${i}`}
+          />
+        )}
+      </Carousel>
+      <div className="absolute bg-linear-to-b from-transparent to-black to-50% flex items-center justify-center p-30 w-full -bottom-40">
+        <h1 className="text-5xl sm:text-7xl text-blue-600 font-semibold text-center tracking-widest text-shadow-lg/20">PARAGON<br/>BLADERZ</h1>
+      </div>
+    </section>
+    <section 
+      className="mt-40 flex flex-col justify-center items-center"
+      id="A"
+    >
+        <h2 className="pl-2 text-3xl text-blue-500 font-semibold my-2">ABOUT</h2>
+        <p>Cebu-based bladers</p>
+    </section>
+    <section 
+      className="mt-40 flex flex-col justify-center items-center"
+      id="T"
+    >
+        <h2 className="pl-2 text-3xl text-blue-500 font-semibold my-2">TOURNAMENTS</h2>
+        <img 
+          src='b_t_494817139_656001597429783_7428790834717624631_n.jpg'
+          className="max-w-300 object-contain w-full"
+        />
+    </section>
+    <section 
+      className="mt-40 flex flex-col justify-center items-center"
+      id="G"
+    >
+      <h2 className="pl-2 text-3xl text-blue-500 font-semibold my-2">GALLERY</h2>
+      <div className="grid grid-cols-2 gap-4 max-w-300 px-4">
+        <div className="grid gap-4">
+            <img className="h-auto max-w-full rounded-lg" src="/mem_sol_495267989_494908636950121_8940839545545571094_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/mem_494828565_743370448027516_5600344745900665180_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/mem_494830752_681245034521396_6974237041716304235_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/b_s_m_494339475_1036654078425165_5703770604074050291_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/bey_494325979_1547426696214892_3118215286646782658_n.jpg" alt=""/>
+          </div>
+          <div className="grid gap-4">
+            <img className="h-auto max-w-full rounded-lg" src="/mem_494819502_619214090577307_6059440257508329745_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/bey_494334439_1193032779035824_8540591792009556940_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/s_m_495267941_655845344092218_5757956685815558560_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/s_m_495267985_1197821911826164_3512951518097994096_n.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/s_m_495267531_1652344918792240_5330667631527052241_n.jpg" alt=""/>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <div className="flex justify-center p-4">
+        <div className="w-full max-w-300 flex justify-between items-center">
+          <div className="flex gap-2 items-center">
+            <img src='/logo.png' width={60} alt="logo" />
+            <a href="" target="_">
+              <img
+                src='/2023_Facebook_icon.svg'
+                width={40}
+              />
+            </a>
+          </div>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#paragon" 
+            className="bg-white/5 p-5 rounded-full cursor-pointer hover:bg-white/90 hover:-translate-y-2 hover:text-black duration-200"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+              <FaAngleDoubleUp/>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+      <div className="flex justify-center text-sm bg-black p-2 border-1 border-gray-800 border-x-0 border-b-0 text-gray-500">
+        Copyright &#169; 2025 Paragon Bladerz | Developed by&nbsp;<a href="https://rybanez.vercel.app/" target="_" className="text-blue-900 hover:text-blue-600">Richard Ybañez</a>
+      </div>
+    </footer>
+  </div>
 }
