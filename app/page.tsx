@@ -43,7 +43,7 @@ export default function Home() {
           />
         )}
       </Carousel>
-      <div className="absolute bg-linear-to-b from-transparent to-black to-50% flex items-center justify-center p-20 w-full -bottom-25">
+      <div className="absolute bg-linear-to-b from-transparent to-black to-50% flex items-center justify-center p-0 w-full -bottom-15">
         <h1 className="text-5xl sm:text-7xl text-blue-600 font-semibold text-center tracking-widest text-shadow-lg/20">PARAGON<br/>BLADERZ</h1>
       </div>
     </section>
@@ -51,24 +51,33 @@ export default function Home() {
       className="mt-25 flex flex-col justify-center items-center"
       id="A"
     >
-        <h2 className="px-5 py-2 text-3xl font-semibold my-2 border-5 border-blue-700">THE TEAM</h2>
+      <div className="relative w-full flex justify-center mb-4">
+        <div className="absolute w-full h-1 bg-gray-900 top-[50%]"></div>
+        <h2 className="w-fit px-5 py-2 sm:text-3xl text-2xl font-semibold z-1 my-2 border-5 border-blue-700 bg-black">THE TEAM</h2>
+      </div>
         <p>Cebu-based bladers</p>
     </section>
     <section 
       className="mt-40 flex flex-col justify-center items-center"
       id="T"
     >
-        <h2 className="px-5 py-2 text-3xl font-semibold my-2 border-5 border-blue-700">TOURNAMENTS</h2>
+        <div className="relative w-full flex justify-center mb-4">
+          <div className="absolute w-full h-1 bg-gray-900 top-[50%]"></div>
+          <h2 className="w-fit px-5 py-2 sm:text-3xl text-2xl font-semibold z-1 my-2 border-5 border-blue-700 bg-black">TOURNAMENTS</h2>
+        </div>
         <img 
           src='b_t_494817139_656001597429783_7428790834717624631_n.jpg'
           className="max-w-300 object-contain w-full"
         />
     </section>
     <section 
-      className="mt-40 flex flex-col justify-center items-center"
+      className="mt-40 mb-20 flex flex-col justify-center items-center"
       id="G"
     >
-      <h2 className="px-5 py-2 text-3xl font-semibold my-2 border-5 border-blue-700">GALLERY</h2>
+      <div className="relative w-full flex justify-center mb-4">
+        <div className="absolute w-full h-1 bg-gray-900 top-[50%]"></div>
+        <h2 className="w-fit px-5 py-2 sm:text-3xl text-2xl font-semibold z-1 my-2 border-5 border-blue-700 bg-black">GALLERY</h2>
+      </div>
       <div className="grid grid-cols-2 gap-4 max-w-300 px-4">
         <div className="grid gap-4">
             <img className="h-auto max-w-full rounded-lg" src="/mem_sol_495267989_494908636950121_8940839545545571094_n.jpg" alt=""/>
