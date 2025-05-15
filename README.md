@@ -6,4 +6,5 @@ link: [https://ry-like-twitter.vercel.app/](https://paragon-bladerz.vercel.app/)
 
 Tech:
 - Nextjs
+- Tailwind
 - MongoDB
